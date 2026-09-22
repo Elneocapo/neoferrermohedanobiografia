@@ -1,232 +1,941 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
 
-    <title>Neo Ferrer Mohedano | Página personal</title>
+<html lang="es"> <head> <meta charset="UTF-8">
 
-    <meta name="description" content="Biografía de Neo Ferrer Mohedano">
-    <meta name="author" content="Neo Ferrer Mohedano">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon1.png">
+
+<title>Neo Ferrer Mohedano | Página personal</title>
+
+<meta name="description" content="Biografía de Neo Ferrer Mohedano">
+<meta name="author" content="Neo Ferrer Mohedano">
+
+<style>
+
+    /* =========================================================
+       ESTILO GENERAL
+       ========================================================= */
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #d4d0c8;
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+
+    /* =========================================================
+       CONTENEDOR
+       ========================================================= */
+
+    #page {
+        width: 850px;
+        max-width: calc(100% - 20px);
+        margin: 18px auto;
+        background: #ffffff;
+
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #404040;
+        border-bottom: 2px solid #404040;
+    }
+
+
+    /* =========================================================
+       CABECERA
+       ========================================================= */
+
+    #header {
+        padding: 12px 15px 10px 15px;
+        background: #ece9d8;
+        border-bottom: 1px solid #808080;
+    }
+
+    .site-title {
+        margin: 0;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .site-title a {
+        color: #003399;
+        text-decoration: none;
+    }
+
+    .site-title a:hover {
+        color: #ff0000;
+        text-decoration: underline;
+    }
+
+    .site-description {
+        margin-top: 1px;
+        color: #555555;
+        font-family: "Times New Roman", serif;
+        font-size: 12px;
+    }
+
+
+    /* =========================================================
+       MENÚ
+       ========================================================= */
+
+    #menu {
+        background: #316ac5;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #183b70;
+    }
+
+    #menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #menu li {
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu a {
+        display: block;
+        padding: 5px 13px;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        text-decoration: none;
+        border-right: 1px solid #7197d0;
+    }
+
+    #menu a:hover {
+        background: #ffffff;
+        color: #003399;
+    }
+
+
+    /* =========================================================
+       CONTENIDO
+       ========================================================= */
+
+    #content {
+        padding: 14px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    #main {
+        width: 555px;
+        min-width: 0;
+    }
+
+    #sidebar {
+        width: 220px;
+        min-width: 0;
+        padding-left: 12px;
+        border-left: 1px solid #999999;
+    }
+
+
+    /* =========================================================
+       ENTRADAS
+       ========================================================= */
+
+    .post {
+        margin-bottom: 25px;
+    }
+
+    .post h1 {
+        margin: 0 0 2px 0;
+        color: #003399;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .post h2 {
+        margin: 18px 0 5px 0;
+        color: #003399;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid #cccccc;
+    }
+
+    .post-meta {
+        margin: 0 0 12px 0;
+        color: #777777;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 11px;
+    }
+
+    .post p {
+        margin: 0 0 10px 0;
+    }
+
+
+    /* =========================================================
+       ENLACES
+       ========================================================= */
+
+    a {
+        color: #0000ee;
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: #551a8b;
+    }
+
+    a:hover {
+        color: #ff0000;
+    }
+
+
+    /* =========================================================
+       FOTO
+       ========================================================= */
+
+    .profile-photo {
+        float: left;
+        width: 130px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 12px 8px 0;
+        padding: 2px;
+        background: #ffffff;
+
+        border-top: 2px solid #808080;
+        border-left: 2px solid #808080;
+        border-right: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+    }
+
+
+    /* =========================================================
+       SIDEBAR
+       ========================================================= */
+
+    .widget {
+        margin-bottom: 12px;
+        background: #f5f5f5;
+
+        border-top: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #808080;
+        border-bottom: 1px solid #808080;
+    }
+
+    .widget h3 {
+        margin: 0;
+        padding: 4px 6px;
+        background: #316ac5;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+    }
+
+    .widget p {
+        margin: 7px;
+        font-size: 11px;
+    }
+
+    .widget ul {
+        margin: 6px 0 7px 25px;
+        padding: 0;
+    }
+
+    .widget li {
+        margin-bottom: 2px;
+        font-size: 11px;
+    }
+
+
+    /* =========================================================
+       BUSCADOR
+       ========================================================= */
+
+    .widget input[type="text"] {
+        width: 125px;
+        max-width: calc(100% - 65px);
+        height: 20px;
+        margin: 7px 3px 7px 7px;
+        padding: 0 2px;
+        background: #ffffff;
+
+        border-top: 2px solid #808080;
+        border-left: 2px solid #808080;
+        border-right: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+    }
+
+    .widget input[type="submit"] {
+        height: 21px;
+        padding: 1px 7px;
+        background: #d4d0c8;
+
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #404040;
+        border-bottom: 2px solid #404040;
+
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+    }
+
+    .widget input[type="submit"]:active {
+        border-top: 2px solid #404040;
+        border-left: 2px solid #404040;
+        border-right: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    #footer {
+        padding: 10px 14px;
+        background: #ece9d8;
+        border-top: 1px solid #808080;
+
+        color: #555555;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    #footer p {
+        margin: 2px 0;
+    }
+
+
+    /* =========================================================
+       OTROS
+       ========================================================= */
+
+    hr {
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #808080;
+    }
+
+    blockquote {
+        margin: 10px 20px;
+        padding: 5px 10px;
+        background: #eeeeee;
+        border-left: 3px solid #316ac5;
+        font-family: "Times New Roman", Times, serif;
+    }
+
+
+    /* =========================================================
+       TABLET
+       ========================================================= */
+
+    @media screen and (max-width: 900px) {
+
+        #page {
+            width: auto;
+            max-width: calc(100% - 10px);
+            margin: 5px auto;
+        }
+
+        #content {
+            display: block;
+        }
+
+        #main {
+            width: 100%;
+        }
+
+        #sidebar {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px 0 0 0;
+
+            border-left: 0;
+            border-top: 1px solid #808080;
+        }
+    }
+
+
+    /* =========================================================
+       MÓVIL
+       ========================================================= */
+
+    @media screen and (max-width: 600px) {
+
+        body {
+            font-size: 13px;
+        }
+
+        #page {
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            border: 0;
+        }
+
+
+        /* CABECERA */
+
+        #header {
+            padding: 10px;
+        }
+
+        .site-title {
+            font-size: 21px;
+            line-height: 1.2;
+        }
+
+        .site-description {
+            font-size: 11px;
+        }
+
+
+        /* MENÚ */
+
+        #menu {
+            height: auto;
+        }
+
+        #menu ul {
+            display: block;
+        }
+
+        #menu li {
+            display: block;
+            width: 100%;
+        }
+
+        #menu a {
+            padding: 8px 10px;
+            font-size: 12px;
+            border-right: 0;
+            border-bottom: 1px solid #7197d0;
+        }
+
+
+        /* CONTENIDO */
+
+        #content {
+            padding: 10px;
+        }
+
+        #main,
+        #sidebar {
+            width: 100%;
+        }
+
+
+        /* TÍTULOS */
+
+        .post h1 {
+            font-size: 22px;
+        }
+
+        .post h2 {
+            font-size: 18px;
+        }
+
+
+        /* FOTO */
+
+        .profile-photo {
+            float: none;
+            display: block;
+            width: 160px;
+            max-width: 100%;
+            margin: 0 auto 12px auto;
+        }
+
+
+        /* SIDEBAR */
+
+        #sidebar {
+            margin-top: 20px;
+        }
+
+
+        /* BUSCADOR */
+
+        .widget input[type="text"] {
+            width: 65%;
+            max-width: none;
+        }
+
+        .widget input[type="submit"] {
+            width: auto;
+        }
+
+
+        /* FOOTER */
+
+        #footer {
+            padding: 10px;
+        }
+    }
+
+
+    /* =========================================================
+       MÓVILES MUY PEQUEÑOS
+       ========================================================= */
+
+    @media screen and (max-width: 350px) {
+
+        .site-title {
+            font-size: 18px;
+        }
+
+        #content {
+            padding: 8px;
+        }
+
+        .post h1 {
+            font-size: 20px;
+        }
+
+        .profile-photo {
+            width: 130px;
+        }
+    }
+
+</style>
+
 </head>
 
 <body>
 
 <div id="page">
 
-    <!-- CABECERA -->
-    <header id="header">
+<!-- CABECERA -->
 
-        <div class="site-title">
-            <a href="index.html">Neo Ferrer Mohedano</a>
-        </div>
+<header id="header">
 
-        <div class="site-description">
-            Página personal
-        </div>
-
-    </header>
-
-
-    <!-- MENÚ -->
-    <nav id="menu">
-
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-
-    </nav>
-
-
-    <!-- CONTENIDO -->
-    <div id="content">
-
-        <main id="main">
-
-            <article class="post">
-
-                <h1 id="sobre-mi">Neo Ferrer Mohedano</h1>
-
-                <p class="post-meta">
-                    Biografía
-                </p>
-
-
-                <img
-                    class="profile-photo"
-                    src="foto.jpg"
-                    alt="Fotografía de Neo Ferrer Mohedano"
-                >
-
-
-                <p>
-                    <strong>Neo Ferrer Mohedano</strong> es un futbolista
-                    originario de Huelva. Debutó en el fútbol profesional
-                    en 2014, comenzando así una carrera deportiva que se
-                    prolongó durante cuatro años.
-                </p>
-
-                <p>
-                    Sus primeros pasos estuvieron vinculados a las
-                    categorías inferiores del <strong>Real Betis
-                    Balompié</strong>, donde disputó una temporada con el
-                    Betis C. Posteriormente pasó al
-                    <strong>CD Leganés B</strong>, equipo en el que
-                    permaneció durante dos temporadas.
-                </p>
-
-                <p>
-                    En la última etapa de su carrera se trasladó a Malasia
-                    para jugar en Kuala Lumpur, donde disputó una temporada
-                    con el <strong>Kuala Lumpur City FC</strong>.
-                </p>
-
-                <p>
-                    En 2018 decidió retirarse del fútbol después de cuatro
-                    años de carrera. Tras dejar el fútbol comenzó a
-                    dedicarse principalmente a la petanca.
-                </p>
-
-                <p>
-                    Ese mismo año ganó el campeonato de petanca de
-                    <a href="https://es.wikipedia.org/wiki/Burguillos_del_Cerro">
-                    Burguillos del Cerro</a>, uno de los principales logros
-                    deportivos de su etapa posterior.
-                </p>
-
-                <p>
-                    Desde entonces ha continuado vinculado al deporte...
-                </p>
-
-
-                <hr>
-
-
-                <p>
-                    <strong>Nombre:</strong> Neo Ferrer Mohedano<br>
-                    <strong>Lugar de origen:</strong> Huelva<br>
-                    <strong>Debut:</strong> 2014<br>
-                    <strong>Carrera futbolística:</strong> 4 años<br>
-                    <strong>Betis C:</strong> 1 temporada<br>
-                    <strong>Leganés B:</strong> 2 temporadas<br>
-                    <strong>Kuala Lumpur City FC:</strong> 1 temporada<br>
-                    <strong>Retirada:</strong> 2018<br>
-                    <strong>Actividad posterior:</strong> Petanca
-                </p>
-
-                <p>
-                    <strong>Logro:</strong> Campeonato de petanca de
-                    Burguillos del Cerro, 2018.
-                </p>
-
-                <p>
-                    <strong>Página actualizada:</strong> septiembre de 2026
-                </p>
-
-            </article>
-
-
-            <!-- CONTACTO -->
-            <article class="post">
-
-                <h2 id="contacto">Contacto</h2>
-
-                <p>
-                    Puedes encontrar información adicional en los siguientes
-                    enlaces:
-                </p>
-
-                <p>
-                    <a href="#">Instagram</a><br>
-                    <a href="#">YouTube</a><br>
-                    <a href="#">X / Twitter</a>
-                </p>
-
-            </article>
-
-        </main>
-
-
-        <!-- BARRA LATERAL -->
-        <aside id="sidebar">
-
-            <div class="widget">
-
-                <h3>Sobre mí</h3>
-
-                <p>
-                    <strong>Neo Ferrer Mohedano</strong><br>
-                    Futbolista.
-                </p>
-
-            </div>
-
-
-            <div class="widget">
-
-                <h3>Páginas</h3>
-
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#sobre-mi">Sobre mí</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-
-            </div>
-
-
-            <div class="widget">
-
-                <h3>Enlaces</h3>
-
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">YouTube</a></li>
-                    <li><a href="#">X / Twitter</a></li>
-                </ul>
-
-            </div>
-
-
-            <div class="widget">
-
-                <h3>Buscar</h3>
-
-                <form action="#" method="get">
-
-                    <input type="text" name="s">
-
-                    <input type="submit" value="Buscar">
-
-                </form>
-
-            </div>
-
-        </aside>
-
-
-        <div class="clear"></div>
-
+    <div class="site-title">
+        <a href="index.html">
+            Neo Ferrer Mohedano
+        </a>
     </div>
 
+    <div class="site-description">
+        Página personal
+    </div>
 
-    <!-- PIE DE PÁGINA -->
-    <footer id="footer">
-
-        <p>
-            © 2026 Neo Ferrer Mohedano · Todos los derechos reservados.
-        </p>
+</header>
 
 
+<!-- MENÚ -->
 
-    </footer>
+<nav id="menu">
 
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Inicio
+            </a>
+        </li>
+
+        <li>
+            <a href="#sobre-mi">
+                Sobre mí
+            </a>
+        </li>
+
+        <li>
+            <a href="#contacto">
+                Contacto
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- CONTENIDO -->
+
+<div id="content">
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main id="main">
+
+        <article class="post">
+
+            <h1 id="sobre-mi">
+                Neo Ferrer Mohedano
+            </h1>
+
+            <p class="post-meta">
+                Biografía
+            </p>
+
+
+            <img
+                class="profile-photo"
+                src="foto.jpg"
+                alt="Fotografía de Neo Ferrer Mohedano"
+            >
+
+
+            <p>
+                <strong>Neo Ferrer Mohedano</strong> es un futbolista
+                originario de
+                <a
+                    href="https://es.wikipedia.org/wiki/Huelva"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Huelva
+                </a>.
+                Debutó en el fútbol profesional
+                en 2014, comenzando así una carrera deportiva que se
+                prolongó durante cuatro años.
+            </p>
+
+
+            <p>
+                Sus primeros pasos estuvieron vinculados a las
+                categorías inferiores del
+                <a
+                    href="https://es.wikipedia.org/wiki/Real_Betis_Balompi%C3%A9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <strong>Real Betis Balompié</strong>
+                </a>,
+                donde disputó una temporada con el
+                <strong>Betis C</strong>.
+                Posteriormente pasó al
+                <a
+                    href="https://es.wikipedia.org/wiki/Club_Deportivo_Legan%C3%A9s"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <strong>CD Leganés</strong>
+                </a>
+                B, equipo en el que permaneció durante dos temporadas.
+            </p>
+
+
+            <p>
+                En la última etapa de su carrera se trasladó a
+                <a
+                    href="https://es.wikipedia.org/wiki/Malasia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Malasia
+                </a>
+                para jugar en
+                <a
+                    href="https://es.wikipedia.org/wiki/Kuala_Lumpur"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Kuala Lumpur
+                </a>,
+                donde disputó una temporada con el
+                <a
+                    href="https://es.wikipedia.org/wiki/Kuala_Lumpur_City_FC"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <strong>Kuala Lumpur City FC</strong>
+                </a>.
+            </p>
+
+
+            <p>
+                En 2018 decidió retirarse del fútbol después de cuatro
+                años de carrera. Tras dejar el fútbol comenzó a
+                dedicarse principalmente a la
+                <a
+                    href="https://es.wikipedia.org/wiki/Petanca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    petanca
+                </a>.
+            </p>
+
+
+            <p>
+                Ese mismo año ganó el campeonato de petanca de
+                <a
+                    href="https://es.wikipedia.org/wiki/Burguillos_del_Cerro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Burguillos del Cerro
+                </a>,
+                uno de los principales logros deportivos de su etapa
+                posterior.
+            </p>
+
+
+            <p>
+                Desde entonces ha continuado vinculado al deporte...
+            </p>
+
+
+            <hr>
+
+
+            <p>
+
+                <strong>Nombre:</strong>
+                Neo Ferrer Mohedano
+                <br>
+
+                <strong>Lugar de origen:</strong>
+                <a
+                    href="https://es.wikipedia.org/wiki/Huelva"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Huelva
+                </a>
+                <br>
+
+                <strong>Debut:</strong>
+                2014
+                <br>
+
+                <strong>Carrera futbolística:</strong>
+                4 años
+                <br>
+
+                <strong>Betis C:</strong>
+                1 temporada
+                <br>
+
+                <strong>Leganés B:</strong>
+                2 temporadas
+                <br>
+
+                <strong>Kuala Lumpur City FC:</strong>
+                1 temporada
+                <br>
+
+                <strong>Retirada:</strong>
+                2018
+                <br>
+
+                <strong>Actividad posterior:</strong>
+                <a
+                    href="https://es.wikipedia.org/wiki/Petanca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Petanca
+                </a>
+
+            </p>
+
+
+            <p>
+
+                <strong>Logro:</strong>
+                Campeonato de petanca de
+                <a
+                    href="https://es.wikipedia.org/wiki/Burguillos_del_Cerro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Burguillos del Cerro
+                </a>,
+                2018.
+
+            </p>
+
+
+            <p>
+                <strong>Página actualizada:</strong>
+                septiembre de 2026
+            </p>
+
+        </article>
+
+
+        <!-- CONTACTO -->
+
+        <article class="post">
+
+            <h2 id="contacto">
+                Contacto
+            </h2>
+
+            <p>
+                Puedes encontrar información adicional en los siguientes
+                enlaces:
+            </p>
+
+            <p>
+                <a href="#">
+                    Instagram
+                </a>
+                <br>
+
+                <a href="#">
+                    YouTube
+                </a>
+                <br>
+
+                <a href="#">
+                    X / Twitter
+                </a>
+            </p>
+
+        </article>
+
+    </main>
+
+
+    <!-- BARRA LATERAL -->
+
+    <aside id="sidebar">
+
+
+        <div class="widget">
+
+            <h3>
+                Sobre mí
+            </h3>
+
+            <p>
+                <strong>Neo Ferrer Mohedano</strong>
+                <br>
+                Futbolista.
+            </p>
+
+        </div>
+
+
+        <div class="widget">
+
+            <h3>
+                Páginas
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#sobre-mi">
+                        Sobre mí
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contacto">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="widget">
+
+            <h3>
+                Enlaces
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        YouTube
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        X / Twitter
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="widget">
+
+            <h3>
+                Buscar
+            </h3>
+
+            <form action="#" method="get">
+
+                <input
+                    type="text"
+                    name="s"
+                >
+
+                <input
+                    type="submit"
+                    value="Buscar"
+                >
+
+            </form>
+
+        </div>
+
+
+    </aside>
 
 </div>
 
-</body>
-</html>
-```
+
+<!-- PIE DE PÁGINA -->
+
+<footer id="footer">
+
+    <p>
+        © 2026 Neo Ferrer Mohedano · Todos los derechos reservados.
+    </p>
+
+</footer>
+
+</div>
+
+</body> </html>
