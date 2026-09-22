@@ -1,0 +1,470 @@
+/* =========================================================
+   PÁGINA PERSONAL - ESTÉTICA WINDOWS XP / INTERNET 2000s
+   ========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #d4d0c8;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+#page {
+    width: 850px;
+    margin: 18px auto;
+    background: #ffffff;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+#header {
+    padding: 12px 15px 10px 15px;
+
+    background: #ece9d8;
+
+    border-bottom: 1px solid #808080;
+}
+
+.site-title {
+    margin: 0;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.site-title a {
+    color: #003399;
+    text-decoration: none;
+}
+
+.site-title a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.site-description {
+    margin-top: 1px;
+
+    color: #555555;
+
+    font-family:
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MENÚ - MUY ANTIGUO
+   ========================================================= */
+
+#menu {
+    height: 27px;
+
+    background: #316ac5;
+
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #183b70;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+#menu li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#menu a {
+    display: block;
+
+    padding: 5px 13px;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    border-right: 1px solid #7197d0;
+}
+
+#menu a:hover {
+    background: #ffffff;
+    color: #003399;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+#content {
+    padding: 14px;
+}
+
+#main {
+    float: left;
+    width: 555px;
+}
+
+#sidebar {
+    float: right;
+    width: 220px;
+
+    padding-left: 12px;
+
+    border-left: 1px solid #999999;
+}
+
+
+/* =========================================================
+   ENTRADAS
+   ========================================================= */
+
+.post {
+    margin-bottom: 25px;
+}
+
+.post h1 {
+    margin: 0 0 2px 0;
+
+    color: #003399;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.post h2 {
+    margin: 18px 0 5px 0;
+
+    color: #003399;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    border-bottom: 1px solid #cccccc;
+}
+
+.post-meta {
+    margin: 0 0 12px 0;
+
+    color: #777777;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: 11px;
+}
+
+.post p {
+    margin: 0 0 10px 0;
+}
+
+
+/* =========================================================
+   ENLACES
+   ========================================================= */
+
+a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+
+/* =========================================================
+   FOTO
+   ========================================================= */
+
+.profile-photo {
+    float: left;
+
+    width: 130px;
+    height: auto;
+
+    margin: 0 12px 8px 0;
+
+    padding: 2px;
+
+    background: #ffffff;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+
+/* =========================================================
+   SIDEBAR - CAJAS TIPO WINDOWS
+   ========================================================= */
+
+.widget {
+    margin-bottom: 12px;
+
+    background: #f5f5f5;
+
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+}
+
+.widget h3 {
+    margin: 0;
+
+    padding: 4px 6px;
+
+    background: #316ac5;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.widget p {
+    margin: 7px;
+
+    font-size: 11px;
+}
+
+.widget ul {
+    margin: 6px 0 7px 25px;
+    padding: 0;
+}
+
+.widget li {
+    margin-bottom: 2px;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BUSCADOR
+   ========================================================= */
+
+.widget input[type="text"] {
+    width: 125px;
+    height: 16px;
+
+    margin: 7px 3px 7px 7px;
+
+    padding: 0 2px;
+
+    background: #ffffff;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.widget input[type="submit"] {
+    height: 21px;
+
+    padding: 1px 7px;
+
+    background: #d4d0c8;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.widget input[type="submit"]:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+#footer {
+    clear: both;
+
+    padding: 10px 14px;
+
+    background: #ece9d8;
+
+    border-top: 1px solid #808080;
+
+    color: #555555;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+#footer p {
+    margin: 2px 0;
+}
+
+
+/* =========================================================
+   DETALLES ANTIGUOS
+   ========================================================= */
+
+hr {
+    height: 1px;
+
+    border: 0;
+
+    border-top: 1px solid #808080;
+}
+
+blockquote {
+    margin: 10px 20px;
+
+    padding: 5px 10px;
+
+    background: #eeeeee;
+
+    border-left: 3px solid #316ac5;
+
+    font-family:
+        "Times New Roman",
+        Times,
+        serif;
+}
+
+
+/* =========================================================
+   FLOAT
+   ========================================================= */
+
+.clear {
+    clear: both;
+}
+
+
+/* =========================================================
+   ADAPTACIÓN MÓVIL
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    #page {
+        width: auto;
+        margin: 5px;
+    }
+
+    #main {
+        float: none;
+        width: auto;
+    }
+
+    #sidebar {
+        float: none;
+        width: auto;
+
+        margin-top: 20px;
+        padding: 10px 0 0 0;
+
+        border-left: 0;
+        border-top: 1px solid #808080;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #menu {
+        height: auto;
+    }
+
+    #menu li {
+        float: none;
+    }
+
+    #menu a {
+        border-bottom: 1px solid #7197d0;
+    }
+
+    #content {
+        padding: 10px;
+    }
+
+    .profile-photo {
+        float: none;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
